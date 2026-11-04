@@ -27,7 +27,7 @@ def load_models():
 
 savings = joblib.load(os.path.join(BASE_DIR, "savings_model.joblib"))
 saver = joblib.load(os.path.join(BASE_DIR, "saver_model.joblib"))
-    return savings, saver
+return savings, saver
 
 
 @st.cache_data
