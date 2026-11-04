@@ -25,9 +25,9 @@ def load_models():
     # TODO 1: load "savings_model.joblib" and "saver_model.joblib" with joblib.load
    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-savings = joblib.load(os.path.join(BASE_DIR, "savings_model.joblib"))
-saver = joblib.load(os.path.join(BASE_DIR, "saver_model.joblib"))
-return savings, saver
+   savings = joblib.load(os.path.join(BASE_DIR, "savings_model.joblib"))
+   saver = joblib.load(os.path.join(BASE_DIR, "saver_model.joblib"))
+   return savings, saver
 
 
 @st.cache_data
