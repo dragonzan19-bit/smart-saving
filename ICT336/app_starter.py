@@ -12,7 +12,7 @@ Run:  streamlit run app.py
 import joblib
 import pandas as pd
 import streamlit as st
-
+import os
 # ---------- STEP 1: page title ----------
 st.set_page_config(page_title="Smart Savings", page_icon="💰", layout="wide")
 st.title("💰 Smart Savings")
@@ -23,8 +23,10 @@ st.caption("ICT336 workshop. Data from Kaggle, for teaching only, not financial 
 @st.cache_resource
 def load_models():
     # TODO 1: load "savings_model.joblib" and "saver_model.joblib" with joblib.load
-    savings = joblib.load("savings_model.joblib")
-    saver = joblib.load("saver_model.joblib")
+   BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+savings = joblib.load(os.path.join(BASE_DIR, "savings_model.joblib"))
+saver = joblib.load(os.path.join(BASE_DIR, "saver_model.joblib"))
     return savings, saver
 
 
