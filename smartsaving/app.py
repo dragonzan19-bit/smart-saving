@@ -20,8 +20,8 @@ st.caption("ICT336 workshop. Data from Kaggle, for teaching only, not financial 
 # ---------- STEP 2: load the saved models (only once) and make tabs ----------
 @st.cache_resource
 def load_models():
-    savings = joblib.load("savings_model.joblib")
-    saver = joblib.load("saver_model.joblib")
+    savings = joblib.load(BASE_DIR / "savings_model.joblib")
+    saver = joblib.load(BASE_DIR /"saver_model.joblib")
     return savings, saver
 
 
