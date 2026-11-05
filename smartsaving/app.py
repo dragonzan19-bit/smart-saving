@@ -10,7 +10,9 @@ Run:  streamlit run app.py
 import joblib
 import pandas as pd
 import streamlit as st
+from pathlib import Path
 
+BASE_DIR = Path(__file__) .resolve().parent
 # ---------- STEP 1: page title ----------
 st.set_page_config(page_title="Smart Savings", page_icon="💰", layout="wide")
 st.title("💰 Smart Savings")
